@@ -6,6 +6,12 @@ intents:
   - affirm
   - deny
   - ask_name
+  - say_name:
+      use_entities:
+      - name
+
+entities:
+  - name
 
 responses:
   utter_greet:
@@ -26,6 +32,9 @@ responses:
   utter_name:
     - text: My name is JARVIS
     - text: You can call me JARVIS
+
+  utter_ask_name:
+    - text: What is your name?
 
 session_config:
   session_expiration_time: 60

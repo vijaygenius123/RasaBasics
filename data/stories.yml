@@ -7,7 +7,16 @@ stories:
   - intent: greet
   - action: utter_greet
 
-- story: happy path name
+- story: happy path ask name
   steps:
   - intent: ask_name
   - action: utter_name
+
+- story: happy path say name
+  steps:
+    - intent: ask_name
+    - action: utter_name
+    - action: utter_ask_name
+    - intent: say_name
+      entities:
+      - name: 'Vijay'

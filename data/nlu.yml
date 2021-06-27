@@ -63,3 +63,13 @@ nlu:
     - name?
     - tell me your name
     - how can i call you?
+
+- intent: say_name
+  examples: |
+    - my name is [vijay]{"entity": "name", "value":"vijay"}
+    - my name is [Jane]{"entity": "name", "value":"Jane"}
+    - my name is [John doe]{"entity": "name", "value":"Jane"}
+    - [Jane doe]{"entity": "name", "value":"Jane Doe"} is my name
+    - [Vijay]{"entity": "name", "value":"Vijay"} is my name
+    - People call me [John doe]{"entity": "name", "value":"John doe"}
+    - People call me [Vijay]{"entity": "name", "value":"Vijay"}
